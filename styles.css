@@ -1,0 +1,517 @@
+
+:root{
+    --main-clr: #1e1e1f ;
+    --main-clr-2: #313131;
+    --main-clr-3: #525252;
+    --main-clr-4: #817f7f;
+
+    --clr: white; /*para las letras, bordes, :active, etc*/
+    --clr-darker: rgb(198, 198, 198); /*--clr pero mas oscuro*/
+    --green: #549766;
+    --red: #9b6767;
+    --clr-2: #9d7e79;  
+    --clr-3: #ccac95;
+    --clr-4: #748b83;
+    --clr-5: #5b756c;
+
+    --llamative-clr: #EDE152; /*clr llamativo para toda la web, dandole un toque chido y llamativo, etc*/
+    --universal-trans: 200ms; /*tiempo de transicion de un estado a otro*/
+    --universal-border-rad: 4px;
+
+    --nice-combination: linear-gradient(90deg, rgba(255,241,0,1) 0%, rgba(209,152,2,1) 63%, rgba(226,114,87,1) 100%);
+    --nice-combination-2: linear-gradient(130deg, rgb(200, 194, 74) 0%, rgba(209,152,2,1) 10%, rgb(236, 66, 23) 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border-radius: var(--universal-border-rad);
+
+    font-family: arial;
+    text-decoration: none;
+    color: var(--clr);
+    cursor:auto;
+    outline: none;
+
+    transition: var(--universal-trans);
+}
+
+*::selection{
+    background: var(--llamative-clr);
+    color: var(--main-clr);
+}
+
+body {
+    background: var(--main-clr);
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    padding-bottom: 150px;
+}
+
+
+/*\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/*/
+
+
+/*estilos generales*/
+#welcomePage{
+    width: 100%;
+
+    border-radius: 0 0 5px 5px;
+
+}
+
+#welcomePage > .imgBox{
+    background-color: none;
+    background-image: var(--principal-bg-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    border-radius:  4px 4px 0 0;
+    
+
+}
+
+.pageContent{
+    width: 95vw;
+    max-width: 900px;
+    min-height: 80vh;
+    margin: 0;
+
+
+}
+
+.pageContent > main{
+    display: none;
+}
+
+
+.niceBox{
+    padding: 3px;
+    background: var(--nice-combination);
+    border-radius: var(--universal-border-rad);
+}
+
+.simpleBox{
+    width: 100%;
+    max-width: 900px;
+    padding: 20px 0 20px 0;
+
+    background-color: var(--main-clr-2);
+    border-radius: var(--universal-border-rad);
+
+    justify-content: center;
+    align-items: center;
+
+}
+.success{
+    background-color: var(--green);
+}
+
+.fail{
+    background-color: var(--red);
+}
+
+.transparent{
+    background: none;
+}
+
+.square{
+    border-radius: 0;
+}
+
+
+.llamativeClr{
+    background-color: var(--green);
+    color: var(--main-clr);
+}
+
+.mainClr{
+    background-color: var(--main-clr);
+    margin-bottom: 3px;
+}
+
+.mainClr2{
+    background-color: var(--main-clr-2);
+    color: var(--clr);
+
+    margin-bottom: 3px;
+}
+
+.mainClr3{
+    background-color: var(--main-clr-3);
+    margin-bottom: 3px;
+}
+
+
+
+
+.simpleBox img{
+    background-color: var(--main-clr-3);
+    outline: none solid 5px;
+    max-width: 300px;
+	border-radius: 6px;
+}
+
+.simpleBox img:hover{
+    outline: var(--clr) solid 5px;
+    background: var(--clr);
+}
+
+#setQuestPage > div.simpleBox{
+    background: none;
+    margin: 0;
+
+}
+
+#setQuestPage > div.simpleBox > h3{
+    font-size: 17px;
+    text-align: left;
+    padding: 0 10%;
+
+}
+
+#setQuestPage > div.simpleBox > input ,
+#setQuestPage > div.simpleBox > textarea {
+    background-color: var(--main-clr-2);
+}
+
+
+/*inputs*/
+
+button{
+    background-color: var(--main-clr-2);
+    padding: 8px;
+    border: none;
+
+    height: 80px;
+    margin: 0 10px 0 10px;
+    min-width: 120px;
+
+    font-size: 16px;
+}
+
+
+button:hover{
+    background-color: var(--main-clr-3);
+}
+
+
+.llamativeBtn{
+    color: var(--main-clr);
+    background-color: var(--llamative-clr);
+    border: var(--llamative-clr) solid 2px;
+
+}
+
+.llamativeBtn:hover{
+    background-color: var(--main-clr);
+    color: var(--llamative-clr);
+}
+
+.llamativeBtn:active{
+    background-color: var(--llamative-clr);
+    color: var(--main-clr);
+}
+
+select{
+    background-color: var(--main-clr-2);
+
+    font-size: 17px;
+
+    width: 90%;
+    max-width: 900px;
+
+    height: 30px;
+    border: none;
+
+    padding: 5px;
+}
+
+select option{
+    background: var(--main-clr-3);
+    color: var(--clr);
+    border: none;
+}
+
+select:hover{
+    background-color: var(--main-clr-4);
+}
+
+
+input,textarea{
+    background-color: var(--main-clr-3);
+    height: 22px;
+    padding: 5px;
+    font-size: 18px;
+
+    width: 80%;
+    max-width: 800px;
+    border: none;
+}
+
+textarea{
+    height: 100px;
+}
+
+input:hover,
+textarea:hover{
+    background-color: var(--main-clr-4);
+}
+
+/*estilos del menu de btns*/
+
+.btnsBox{
+    width: 100%;
+    height: 100px;
+    background-color: var(--main-clr);
+
+    padding: 0 0 6px 0;
+
+    border-radius: 0;
+    border-top: 3px solid var(--clr);
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    z-index: 2;
+    position: fixed;
+    bottom: -10px;
+
+}
+
+.btnsBox > button{
+    display: none;
+}
+
+
+.homeBtn{
+    width: 80px;
+    min-width: 0;
+
+    padding-top: 12px;
+    font-size: 30px;
+}
+
+.homeBtn ion-icon{
+    color: var(--clr);
+}
+
+.homeBtn:hover{
+    font-size: 35px;
+}
+
+.createQuestBtn{
+    background-color: var(--main-clr-3);
+    border: white solid 2px;
+
+    min-width: 0;
+    width: 70px;
+    height: 70px;
+
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.createQuestBtn > ion-icon{
+    color: var(--clr);
+    font-size: 40px;
+    margin-bottom: -1px;
+}
+
+.createQuestBtn:hover{
+    background-color: var(--clr);
+}
+
+.createQuestBtn:hover > ion-icon{
+    color: var(--main-clr);
+}
+
+.generateQuestsBtn{
+    background-color: var(--clr);
+    color: var(--main-clr);
+    max-width: 150px;
+}
+
+.generateQuestsBtn:hover{
+    background-color: var(--clr-2);
+    border-color: var(--clr-2);
+}
+/*TEORIM NEW STYLES ==============================================*/
+
+a{
+    color: var(--llamative-clr);
+}
+
+#welcomePage > .menuBtnsBox{
+    padding: 10px;
+}
+
+#welcomePage > .menuBtnsBox > .menuBtn{
+    background-color: var(--main-clr-2);
+    border-bottom: var(--main-clr-3) solid 3.5px;
+    border-right: var(--main-clr-3) solid 3.5px;
+
+    width: 42% ;
+    max-width: 350px;
+    height:  130px;
+    max-height: 130px;
+}
+
+button:hover,
+#welcomePage > .menuBtnsBox > .menuBtn:hover{
+    background-color: var(--main-clr-3);
+}
+
+button:active,
+#welcomePage > .menuBtnsBox > .menuBtn:active{
+    background-color: var(--clr);
+    color: var(--main-clr);
+    
+    border-bottom: var(--clr) solid 3.5px;
+    border-right: var(--clr) solid 3.5px;
+}
+
+#welcomePage > .menuBtnsBox > .menuBtn:nth-child(n + 3){
+    font-size: 13px;
+    height: 100px;
+}
+
+.suggestedContents{
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.suggestedContents > .articleBox{
+
+    border: var(--main-clr-3) solid 3px;
+    background-color: var(--main-clr-3);
+    width: 400px;
+    max-width: none;
+
+
+    margin: 6px 6px 0 0;
+
+    display: flex;
+}
+
+.suggestedContents > .articleBox:hover{
+    background-color: var(--main-clr-4);
+    border-color: var(--nice-combination);
+}
+
+.suggestedContents > .articleBox > img{
+    object-fit:cover;
+    width: 150px;
+    height: 130px;
+}
+
+.suggestedContents > .articleBox > .articleBoxInfo{
+    width: 100%;
+    margin-left: 3px;
+}
+
+.suggestedContents > .articleBox > .articleBoxInfo > .title{
+    font-size: 18px;
+    padding: 5px 3px 5px 3px;
+}
+
+.suggestedContents > .articleBox > .articleBoxInfo > .asign{
+    font-size: 13px;
+    background-color: var(--main-clr-2);
+
+}
+
+.suggestedContents > .articleBox > .articleBoxInfo > .unity{
+    font-size: 11px;
+}
+
+.squareBox{
+    color: var(--clr);
+    background: var(--clr-2);
+    width: 45% ;
+    max-width: 300px;
+    height: 100px;
+    padding: 20px 0 20px 0;
+
+    margin: 0 5px 5px 0;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.tinyBtn{
+    background-color: var(--main-clr-3);
+    padding: 1px;
+    height: 23px;
+    min-width: 60px;
+}
+
+.tinyBtn ion-icon{
+    font-size: 24px;
+}
+
+.tinyBtn:hover{
+    background-color: var(--main-clr-4);
+}
+
+.tinyBtn:active{
+    background-color: var(--clr);
+}
+
+
+/*J01S03A2009M*/
+
+.subtopicsBox{
+    display: flex;
+    flex-direction:column;
+    text-align: start;
+
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+embed{
+    background: var(--main-clr-2);
+    margin: 0 0 15px 0;
+}
+
+.questionBox{
+    padding: 20px;
+    font-size: 17px;
+    text-align: start;
+    padding-left: 10px;
+}
+
+.questionBox > select{
+    background-color: var(--main-clr-3);
+    width: 85%;
+}
+
+.catalogItem{
+    background-color: var(--main-clr-3);
+    padding: 10px;
+    margin: 3px;
+}
+
+.catalogItem:hover{
+    background-color: var(--main-clr-4);
+}
